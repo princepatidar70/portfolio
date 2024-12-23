@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div  id="home" className="home-main">
+    <div id="home" className="home-main">
       <div className="h-leftbox">
         <h1>Welcome to My Portfolio</h1>
         <h2>Hey, I'm Prince Patidar </h2>
@@ -16,7 +16,7 @@ const Home = () => {
         <p>Explore my projects and sign up to get updates.</p>
         <div className="btns">
           <a
-            href="/Prince patidar resume.pdf"
+            href="/Prince_patidar_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >

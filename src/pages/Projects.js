@@ -2,7 +2,7 @@ import React from "react";
 
 const Projects = () => {
   return (
-    <div  id="projects" className="project-main">
+    <div id="projects" className="project-main">
       <h1 className="project-head">My Projects</h1>
 
       <h2 class="section-subtitle">
@@ -14,7 +14,7 @@ const Projects = () => {
         <div class="projects-grid">
           <div class="project-card">
             <img
-              src="https://www.ust.com/content/dam/ust/images/logos/ust-plutora.jpg?auto=webp,smallest&quality=80"
+              src="https://framerusercontent.com/images/pqnCgfgyuuTy7vuKiKptZxdqIQ.png"
               alt="Plutora Project Screenshot"
               class="project-image"
             />
@@ -132,6 +132,7 @@ const Projects = () => {
               </div>
             </div>
           </div>
+
         </div>
       </section>
     </div>

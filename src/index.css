@@ -78,7 +78,7 @@ body {
 }
 
 .btn {
-  width: auto;
+  width: 200px;
   height: 45px;
   border-radius: 20px;
   padding: 15px;
@@ -86,17 +86,19 @@ body {
   align-items: center;
   border: aliceblue;
   font-size: medium;
+  justify-content: center;
+  background-color: #9196f2;
 }
 
 .btn:hover {
-  background-color: aquamarine;
+  background-color: rgb(114, 138, 244);
   cursor: pointer;
 }
 
 .about-head {
   display: flex;
   justify-content: center;
-  margin-top: 150px;
+ 
   color: rgb(156, 165, 241);
 }
 

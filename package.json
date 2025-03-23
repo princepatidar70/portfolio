@@ -28,7 +28,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://princepatidar70.github.io/portfolio/",
+ 
   "browserslist": {
     "production": [
       ">0.2%",

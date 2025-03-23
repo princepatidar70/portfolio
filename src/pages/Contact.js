@@ -8,7 +8,7 @@ const Contact = () => {
     message: "",
   });
 
-  const [successMessage, setSuccessMessage] = useState(""); 
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -19,14 +19,14 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_ln0xj3o", 
-        "template_7qi608b", 
+        "service_ln0xj3o",
+        "template_7qi608b",
         {
           user_name: formData.name,
           user_email: formData.email,
           user_message: formData.message,
         },
-        "-kzMlCj3vqPa9U559" 
+        "-kzMlCj3vqPa9U559"
       )
       .then(
         (response) => {
@@ -49,46 +49,52 @@ const Contact = () => {
   };
 
   return (
-    <>
-      <h1 id="contact" className="contact-head">Contact</h1>
-      <div className="form">
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            className="input"
-            placeholder="Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-          <br />
-          <input
-            type="email"
-            name="email"
-            className="input"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          <br />
-          <textarea
-            name="message"
-            className="input"
-            placeholder="Message..."
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-          <br />
-          <button className="s-btn" type="submit">
-            Submit
-          </button>
-        </form>
+    <div className="container py-5" id="contact">
+      <h1 className="text-center mb-4">Contact</h1>
+      <div className="row justify-content-center">
+        <div className="col-md-8 col-lg-6">
+          <form onSubmit={handleSubmit} className="p-4 rounded shadow">
+            <div className="mb-3">
+              <input
+                type="text"
+                name="name"
+                className="form-control"
+                placeholder="Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                type="email"
+                name="email"
+                className="form-control"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <textarea
+                name="message"
+                className="form-control"
+                placeholder="Message..."
+                rows="4"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
+            </div>
+            <button className="btn btn-primary w-100" type="submit">
+              Submit
+            </button>
+          </form>
+          {successMessage && <p className="text-center text-success mt-3">{successMessage}</p>}
+        </div>
       </div>
-        {successMessage && <p style={{display: 'flex', justifyContent:'center', color:'green'}}>{successMessage}</p>}
-    </>
+    </div>
   );
 };
 

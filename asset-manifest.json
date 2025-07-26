@@ -1,9 +1,11 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.b5bfbaaa.css",
-    "main.js": "/portfolio/static/js/main.607ac418.js",
+    "main.css": "/portfolio/static/css/main.fa3b09a1.css",
+    "main.js": "/portfolio/static/js/main.d7f818e4.js",
     "static/media/p2-logo.png": "/portfolio/static/media/p2-logo.f33312824129ac21395a.png",
+    "static/media/lnlogo.png": "/portfolio/static/media/lnlogo.b0e1b114349f962697a7.png",
     "static/media/me.png": "/portfolio/static/media/me.e21a8c07b97ce7dd1a83.png",
+    "static/media/dekhorental.png": "/portfolio/static/media/dekhorental.5a2206a1330efef311fb.png",
     "static/media/social.png": "/portfolio/static/media/social.3265f4c9337175e4f80d.png",
     "static/media/github.png": "/portfolio/static/media/github.82f9dcd194f53fd9416f.png",
     "static/media/p1.jpg": "/portfolio/static/media/p1.8f8a4e7ee01b806fff7d.jpg",
@@ -12,11 +14,11 @@
     "static/media/facebook.png": "/portfolio/static/media/facebook.49e67d43221b6bb1aa86.png",
     "static/media/linkedin.png": "/portfolio/static/media/linkedin.f249b38224ca41a0b909.png",
     "index.html": "/portfolio/index.html",
-    "main.b5bfbaaa.css.map": "/portfolio/static/css/main.b5bfbaaa.css.map",
-    "main.607ac418.js.map": "/portfolio/static/js/main.607ac418.js.map"
+    "main.fa3b09a1.css.map": "/portfolio/static/css/main.fa3b09a1.css.map",
+    "main.d7f818e4.js.map": "/portfolio/static/js/main.d7f818e4.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5bfbaaa.css",
-    "static/js/main.607ac418.js"
+    "static/css/main.fa3b09a1.css",
+    "static/js/main.d7f818e4.js"
   ]
 }

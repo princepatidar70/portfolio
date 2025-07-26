@@ -1,5 +1,6 @@
 import React from "react";
-
+import dekhorental from '../assets/dekhorental.png'
+import lnhospital from '../assets/lnlogo.png'
 const Projects = () => {
   return (
     <div id="projects" className="project-main">
@@ -132,6 +133,90 @@ const Projects = () => {
               </div>
             </div>
           </div>
+          
+             <div class="project-card">
+  <img
+    src={dekhorental}
+    alt="DekhoRental"
+    class="project-image"
+    style={{
+      height: "180px",
+      width: "100%",
+      objectFit: "contain",
+      padding: "20px",
+      backgroundColor: 'black',
+    }}
+  />
+  <div class="project-content">
+    <h3 class="project-title">DekhoRental – A rental property management platform</h3>
+    <p class="project-description">
+      A platform designed to help property owners list their properties and allow users to explore, book, and pay online for short or long-term stays.
+    </p>
+    <ul class="project-contributions">
+      <li>Developed dynamic property listing and search with filters.</li>
+      <li>Created booking system with availability calendar and status updates.</li>
+      <li>Integrated online and offline payment options for tenants.</li>
+    </ul>
+    <div class="project-tech-stack">
+      <span class="tech-badge">React.js</span>
+      <span class="tech-badge">Bootstrap</span>
+      <span class="tech-badge">Node.js</span>
+      <span class="tech-badge">Express.js</span>
+      <span class="tech-badge">MySql</span>
+    </div>
+    <div class="project-links">
+      <a
+        href="https://dekhorentals.com/"
+        target="_blank"
+        class="live-link"
+      >
+        View Live
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <img
+    src={lnhospital}
+    alt="Ln Hospital"
+    class="project-image"
+    style={{
+      height: "180px",
+      width: "100%",
+      objectFit: "contain",
+      padding: "20px",
+      backgroundColor: "#f9f9f9",
+    }}
+  />
+  <div class="project-content">
+    <h3 class="project-title">LN Hospital HR Portal – Complete recruitment management system</h3>
+    <p class="project-description">
+      A job portal designed for hospital hiring with separate admin, HR, and applicant panels to streamline applications, interviews, and onboarding.
+    </p>
+    <ul class="project-contributions">
+      <li>Built secure login/signup with OTP and role-based dashboards.</li>
+      <li>Implemented job posting, application tracking, interview feedback, and offer letter flow.</li>
+      <li>Automated document uploads, status updates, and email notifications.</li>
+    </ul>
+    <div class="project-tech-stack">
+      <span class="tech-badge">React.js</span>
+      <span class="tech-badge">Bootstrap</span>
+      <span class="tech-badge">Node.js</span>
+      <span class="tech-badge">ExpressJs</span>
+      <span class="tech-badge">MongoDB</span>
+    </div>
+    <div class="project-links">
+      <a
+        href="https://lnhospitalhr.com/"
+        target="_blank"
+        class="live-link"
+      >
+        View Live
+      </a>
+    </div>
+  </div>
+</div>
 
         </div>
       </section>

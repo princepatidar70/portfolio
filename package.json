@@ -41,6 +41,8 @@
       "last 1 safari version"
     ]
   },
+  "homepage": " https://princepatidar70.github.io/portfolio/",
+ 
   "devDependencies": {
     "gh-pages": "^6.2.0"
   }

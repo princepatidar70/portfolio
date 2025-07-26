@@ -9,7 +9,7 @@ const Home = () => {
             <h1 className="display-4 fw-bold">Welcome to My Portfolio</h1>
             <h2 className="h3 mb-3">Hey, I'm <span className="text-primary">Prince Patidar</span></h2>
             <p className="lead">
-              A Passionate <span className="fw-bold text-primary">Front-End Developer</span>.
+              A Passionate <span className="fw-bold text-primary">Full Stack Developer</span>.
             </p>
             <p className="text-light">
               Building engaging, user-friendly web experiences with modern
@@ -18,13 +18,15 @@ const Home = () => {
             <p className="text-light ">Explore my projects and stay updated.</p>
             <div className="mt-3 d-flex justify-content-center">
               <a
-                href="/Prince_patidar_resume.pdf"
+                href={`${process.env.PUBLIC_URL}/princeResume.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary px-4 shadow-sm"
               >
                 View Resume
               </a>
+
+
             </div>
           </div>
 

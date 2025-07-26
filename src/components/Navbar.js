@@ -6,10 +6,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="navbar navbar-expand-lg ">
-      <div className="container">
+    <nav className="navbar navbar-expand-lg">
+      <div className="container d-flex justify-content-between align-items-center">
         <a className="navbar-brand" href="/">
-          <h2 className="logo">Prince's Portfolio</h2>
+          <h2 className="logo m-0">Prince's Portfolio</h2>
         </a>
         <button
           className="navbar-toggler"

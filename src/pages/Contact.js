@@ -33,7 +33,7 @@ const Contact = () => {
       .then(
         (response) => {
           console.log("Email sent successfully:", response.text);
-          setSuccessMessage("Message sent successfully!");
+          setSuccessMessage("Message sent successfully! I will reply to you soon.");
           setIsSending(false);
           setFormData({
             name: "",
@@ -42,7 +42,7 @@ const Contact = () => {
           });
           setTimeout(() => {
             setSuccessMessage("");
-          }, 3000);
+          }, 5000);
         },
         (error) => {
           console.error("Failed to send email:", error.text);

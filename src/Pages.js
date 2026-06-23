@@ -19,14 +19,10 @@ const Pages = () => {
       </ScrollReveal>
       <div className="section-separator"></div>
       
-      <ScrollReveal>
-        <Projects />
-      </ScrollReveal>
+      <Projects />
       <div className="section-separator"></div>
       
-      <ScrollReveal direction="right">
-        <Skills />
-      </ScrollReveal>
+      <Skills />
       <div className="section-separator"></div>
       
       <ScrollReveal>

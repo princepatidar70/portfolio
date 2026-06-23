@@ -14,8 +14,7 @@ const Footer = () => {
           <div className="col-md-4 mb-4 mb-md-0">
             <h2 className="footer-logo">Prince's Portfolio</h2>
             <p className="text-muted small" style={{ maxWidth: "300px" }}>
-              Creating elegant, user-centric web applications using modern full-stack development tools.
-            </p>
+              I specialize in developing modern web and mobile applications using React, React Native, Node.js, and PostgreSQL. Passionate about creating secure, high-performance, and user-focused solutions that solve real-world problems.            </p>
           </div>
 
           <div className="col-md-4 mb-4 mb-md-0 text-center">

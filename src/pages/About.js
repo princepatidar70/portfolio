@@ -16,10 +16,10 @@ const About = () => {
             Hello! I'm Prince Patidar
           </h3>
           <p className="text-muted mb-3" style={{ fontSize: "1.02rem", lineHeight: "1.8" }}>
-            I have completed my graduation in BSc (Computer Science) and am currently pursuing MCA (2025). I specialize in designing and building modern web environments.
+            I have completed my graduation in BSc (Computer Science) and my post-graduation in MCA (2025). I specialize in designing and building modern web environments.
           </p>
           <p className="text-muted mb-3" style={{ fontSize: "1.02rem", lineHeight: "1.8" }}>
-            I'm a Front-End Developer with over 2.5 years of experience in creating dynamic, responsive, and visually appealing websites. I specialize in JavaScript frameworks like React.js and have hands-on experience in backend development using Node.js and MongoDB.
+            I'm a Full Stack Developer with over 2.5 years of experience in creating dynamic, responsive, and visually appealing web applications. I specialize in React.js and have hands-on experience in backend development using Node.js, Express, PostgreSQL, and MongoDB.
           </p>
           <p className="text-muted mb-0" style={{ fontSize: "1.02rem", lineHeight: "1.8" }}>
             I thrive on turning ideas into intuitive and functional web applications. Whether it's designing clean user interfaces or tackling challenging backend logic, I love solving problems with code.

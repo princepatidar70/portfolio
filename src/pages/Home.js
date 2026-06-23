@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import me from '../assets/me.jpg';
 
-const words = ["Full Stack Developer", "React Specialist", "MCA Scholar", "Problem Solver"];
+const words = ["Full Stack Developer", "React Specialist", "Node Specialist", "MCA Scholar", "Problem Solver"];
 
 const Home = () => {
   const [index, setIndex] = useState(0);
@@ -41,12 +41,27 @@ const Home = () => {
             <h1 className="hero-gradient-text fw-bold mb-3">
               Hi, I'm Prince Patidar
             </h1>
-            <h2 className="h3 mb-4 text-light">
+            <h2 className="h3 mb-3 text-light">
               A Passionate <span className="highlight-text">{currentText}</span>
               <span className="typing-cursor"></span>
             </h2>
-            <p className="lead text-muted mb-4" style={{ fontSize: "1.1rem", lineHeight: "1.7" }}>
-              I craft visually stunning, responsive, and performance-optimized digital solutions using modern front-end frameworks and robust back-end tech.
+            <div
+              className="mb-3 text-md-start text-center"
+              style={{
+                fontFamily: "var(--font-heading)",
+                fontSize: "1.25rem",
+                fontWeight: "700",
+                background: "linear-gradient(90deg, #ffffff 20%, var(--secondary) 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                display: "inline-block",
+                letterSpacing: "-0.01em"
+              }}
+            >
+              Turning ideas into powerful digital experiences.
+            </div>
+            <p className="lead text-muted mb-4" style={{ fontSize: "1rem", lineHeight: "1.7" }}>
+              I'm a Full Stack Developer passionate about building secure, scalable, and high-performance applications. From intuitive user interfaces to robust backend systems, I create solutions that help businesses grow and deliver exceptional user experiences.
             </p>
 
             <div className="d-flex flex-wrap justify-content-center justify-content-md-start gap-3 mt-4">

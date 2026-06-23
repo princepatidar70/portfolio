@@ -9,6 +9,7 @@ const Contact = () => {
   });
 
   const [successMessage, setSuccessMessage] = useState("");
+  const [isSending, setIsSending] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -16,10 +17,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSending(true);
 
     emailjs
       .send(
-        "service_ln0xj3o",
+        "service_82yatfk",
         "template_7qi608b",
         {
           user_name: formData.name,
@@ -32,6 +34,7 @@ const Contact = () => {
         (response) => {
           console.log("Email sent successfully:", response.text);
           setSuccessMessage("Message sent successfully!");
+          setIsSending(false);
           setFormData({
             name: "",
             email: "",
@@ -39,59 +42,96 @@ const Contact = () => {
           });
           setTimeout(() => {
             setSuccessMessage("");
-          }, 2000);
+          }, 3000);
         },
         (error) => {
           console.error("Failed to send email:", error.text);
           setSuccessMessage("Failed to send the message. Please try again.");
+          setIsSending(false);
         }
       );
   };
 
   return (
     <div className="container py-5" id="contact">
-      <h1 className="text-center mb-4">Contact</h1>
-      <div className="row justify-content-center">
+      <div className="text-center mb-5">
+        <h5 className="text-uppercase fw-bold mb-2" style={{ color: "var(--primary)", letterSpacing: "1px", fontSize: "0.85rem" }}>
+          GET IN TOUCH
+        </h5>
+        <h1 className="fw-bold display-5 mb-3">Contact Me</h1>
+        <p className="text-muted section-subtitle mx-auto">
+          Feel free to reach out for collaborations, project inquiries, or just to say hi!
+        </p>
+      </div>
+
+      <div className="row justify-content-center mt-4">
         <div className="col-md-8 col-lg-6">
-          <form onSubmit={handleSubmit} className="p-4 rounded shadow">
-            <div className="mb-3">
-              <input
-                type="text"
-                name="name"
-                className="form-control"
-                placeholder="Name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="mb-3">
-              <input
-                type="email"
-                name="email"
-                className="form-control"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="mb-3">
-              <textarea
-                name="message"
-                className="form-control"
-                placeholder="Message..."
-                rows="4"
-                value={formData.message}
-                onChange={handleChange}
-                required
-              ></textarea>
-            </div>
-            <button className="btn btn-primary w-100" type="submit">
-              Submit
-            </button>
-          </form>
-          {successMessage && <p className="text-center text-success mt-3">{successMessage}</p>}
+          <div className="contact-card glass-card">
+            <form onSubmit={handleSubmit}>
+              <div className="form-group-custom">
+                <input
+                  type="text"
+                  name="name"
+                  className="form-control-custom"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  disabled={isSending}
+                />
+              </div>
+              <div className="form-group-custom">
+                <input
+                  type="email"
+                  name="email"
+                  className="form-control-custom"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  disabled={isSending}
+                />
+              </div>
+              <div className="form-group-custom">
+                <textarea
+                  name="message"
+                  className="form-control-custom"
+                  placeholder="Your Message..."
+                  rows="5"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  disabled={isSending}
+                ></textarea>
+              </div>
+              <button
+                className="btn-primary-glow w-100 justify-content-center"
+                type="submit"
+                disabled={isSending}
+                style={{ height: "50px" }}
+              >
+                {isSending ? (
+                  <>
+                    <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                    <span>Sending Message...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Send Message</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="ms-1">
+                      <line x1="22" y1="2" x2="11" y2="13" />
+                      <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                    </svg>
+                  </>
+                )}
+              </button>
+            </form>
+            {successMessage && (
+              <div className={`text-center mt-3 p-2 rounded small ${successMessage.includes("Failed") ? "text-danger" : "text-success"}`} style={{ background: "rgba(255,255,255,0.03)" }}>
+                {successMessage}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

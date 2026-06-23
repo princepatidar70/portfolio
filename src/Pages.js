@@ -4,15 +4,34 @@ import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import ScrollReveal from "./components/ScrollReveal";
 
 const Pages = () => {
   return (
     <div className="container">
-      <Home />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
+      <ScrollReveal>
+        <Home />
+      </ScrollReveal>
+      <div className="section-separator"></div>
+      
+      <ScrollReveal direction="left">
+        <About />
+      </ScrollReveal>
+      <div className="section-separator"></div>
+      
+      <ScrollReveal>
+        <Projects />
+      </ScrollReveal>
+      <div className="section-separator"></div>
+      
+      <ScrollReveal direction="right">
+        <Skills />
+      </ScrollReveal>
+      <div className="section-separator"></div>
+      
+      <ScrollReveal>
+        <Contact />
+      </ScrollReveal>
     </div>
   );
 };

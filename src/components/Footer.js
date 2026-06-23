@@ -8,24 +8,24 @@ import gitlab from "../assets/gitlab.png";
 
 const Footer = () => {
   return (
-    <footer className="container-fluid footer text-white py-4 mt-5">
-      <div className="container text-center text-md-start">
-        <div className="row align-items-center">
-          <div className="col-md-4 text-center text-md-start mb-3 mb-md-0">
-            <h2 className="fw-bold">Prince's Portfolio</h2>
+    <footer className="footer text-white py-5 mt-5">
+      <div className="container">
+        <div className="row align-items-center justify-content-between text-center text-md-start">
+          <div className="col-md-4 mb-4 mb-md-0">
+            <h2 className="footer-logo">Prince's Portfolio</h2>
+            <p className="text-muted small" style={{ maxWidth: "300px" }}>
+              Creating elegant, user-centric web applications using modern full-stack development tools.
+            </p>
           </div>
 
-          <div className="col-md-4 text-center mb-3 mb-md-0">
-            <h5 className="fw-bold">Get In Touch</h5>
-            <p className="mb-1">43, Devendra Nagar, Chankyapuri, Indore 452001</p>
-            <p className="small">I agree to all your terms and policies</p>
+          <div className="col-md-4 mb-4 mb-md-0 text-center">
+            <h5 className="fw-bold mb-3" style={{ color: "var(--primary)" }}>Get In Touch</h5>
+            <p className="mb-1 text-muted small">45, Vijay Nagar, Indore 452001</p>
+            <p className="text-muted small">ppatidar9670@gmail.com | 7722885734</p>
           </div>
 
           <div className="col-md-4 text-center text-md-end">
-            <h5 className="fw-bold">Contact</h5>
-            <p className="mb-1">princeptdr12@gmail.com</p>
-            <p className="mb-2">7722885734</p>
-
+            <h5 className="fw-bold mb-3" style={{ color: "var(--primary)" }}>Connect Socially</h5>
             <div className="d-flex justify-content-center justify-content-md-end gap-3">
               <a href="https://linkedin.com/in/prince-patidar-a9b13023a" target="_blank" rel="noopener noreferrer">
                 <img src={linkedin} alt="linkedin" width="30px" />
@@ -48,10 +48,17 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
 
-      <hr className="mt-4 border-light" />
-      <p className="text-center small mb-0">Copyright &copy; 2024 <span className="fw-bold">Prince Patidar</span>. All Rights Reserved.</p>
+        <hr className="mt-5" style={{ borderColor: "var(--border-glass)" }} />
+
+        <div className="row mt-4 align-items-center">
+          <div className="col-12 text-center">
+            <p className="small mb-0 text-muted">
+              Copyright &copy; {new Date().getFullYear()} <span style={{ color: "var(--primary)", fontWeight: "600" }}>Prince Patidar</span>. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 };

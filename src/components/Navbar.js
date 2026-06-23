@@ -1,13 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-import logo from '../assets/p2-logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg">
-      <div className="container d-flex justify-content-between align-items-center">
+    <nav className={`navbar navbar-expand-lg ${scrolled ? "scrolled" : ""}`}>
+      <div className="container">
         <a className="navbar-brand" href="/">
           <h2 className="logo m-0">Prince's Portfolio</h2>
         </a>
@@ -15,34 +29,83 @@ const Navbar = () => {
           className="navbar-toggler"
           type="button"
           onClick={() => setIsOpen(!isOpen)}
+          aria-controls="navbarNav"
+          aria-expanded={isOpen}
+          aria-label="Toggle navigation"
+          style={{ filter: "invert(1)" }}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`} id="navbarNav">
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link" to="home" smooth={true} duration={300} onClick={() => setIsOpen(false)}>
+              <Link
+                className="nav-link"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={300}
+                activeClass="active"
+                onClick={() => setIsOpen(false)}
+              >
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="about" smooth={true} duration={300} onClick={() => setIsOpen(false)}>
-                About Us
+              <Link
+                className="nav-link"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={300}
+                activeClass="active"
+                onClick={() => setIsOpen(false)}
+              >
+                About Me
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="projects" smooth={true} duration={300} onClick={() => setIsOpen(false)}>
+              <Link
+                className="nav-link"
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={300}
+                activeClass="active"
+                onClick={() => setIsOpen(false)}
+              >
                 Projects
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="skill" smooth={true} duration={300} onClick={() => setIsOpen(false)}>
-                Skill
+              <Link
+                className="nav-link"
+                to="skill"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={300}
+                activeClass="active"
+                onClick={() => setIsOpen(false)}
+              >
+                Skills
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="contact" smooth={true} duration={500} onClick={() => setIsOpen(false)}>
-                Contact Us
+              <Link
+                className="nav-link"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                activeClass="active"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
               </Link>
             </li>
           </ul>

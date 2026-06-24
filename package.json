@@ -28,7 +28,6 @@
       "react-app/jest"
     ]
   },
- 
   "browserslist": {
     "production": [
       ">0.2%",
@@ -42,8 +41,7 @@
     ]
   },
   "homepage": " https://princepatidar70.github.io/portfolio/",
- 
   "devDependencies": {
-    "gh-pages": "^6.2.0"
+    "gh-pages": "^6.3.0"
   }
 }
